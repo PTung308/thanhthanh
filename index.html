@@ -2,33 +2,203 @@
 <html lang="vi">
 
 <head>
-  <meta charset="UTF-8">
-  <title>Trang Cá Nhân</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio của Thanh Cute</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="./img/icon.png" type="image/png" />
+
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #f0f0f0;
-      text-align: center;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 50px;
+      padding: 0;
+      background: #121212;
+      color: #eee;
     }
 
-    h1 {
-      color: #007bff;
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      background: #1f1f1f;
     }
 
-    img {
-      height: 20%;
-      width: 20%;
-      border-radius: 20px;
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #f39c12;
+      margin-bottom: 10px;
+      object-fit: cover;
+      object-position: center 25%;
+    }
+
+    header h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 28px;
+    }
+
+    header p {
+      margin: 0;
+    }
+
+    .socials {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .socials a {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: #f39c12;
+      color: white;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .socials a:hover {
+      background-color: #e67e22;
+    }
+
+
+    main {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      border-bottom: 2px solid #f39c12;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .skills {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .skill {
+      background: #2c2c2c;
+      padding: 15px 20px;
+      border-radius: 10px;
+      flex: 1 1 150px;
+      text-align: center;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: #2c2c2c;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .project-card .info {
+      padding: 15px;
+    }
+
+    .project-card .info h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      color: #f39c12;
+    }
+
+    .project-card .info p {
+      margin: 0;
+      font-size: 14px;
+      color: #ccc;
     }
   </style>
 </head>
 
 <body>
-  <img src="./anh-tho-chibi-cute-13.webp" alt="tho">
-  <h1>Chào mừng bạn đến với trang web của Thanh Thanh</h1>
-  <p>Anh mới tạo chưa có gì đâu hehe =)))) </p>
+  <header>
+    <img src="./img/avatar.jpg" alt="Ảnh cá nhân" />
+    <h1>Thanh Thanh</h1>
+    <p>Nhà chiến lược truyền thông</p>
+    <div class="socials">
+      <a href="https://www.facebook.com/tthanh1408" target="_blank" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/lt.tantan/" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://m.me/tthanh1408" target="_blank" title="Messenger">
+        <i class="fab fa-facebook-messenger"></i>
+      </a>
+    </div>
+
+  </header>
+  <main>
+    <section>
+      <h2>Kỹ năng</h2>
+      <div class="skills">
+        <div class="skill">Lập kế hoạch</div>
+        <div class="skill">Thành thạo Tiếng Hàn</div>
+        <div class="skill">Thích ứng linh hoạt</div>
+        <div class="skill">Truyền thông xã hội</div>
+        <div class="skill">Viết nội dung</div>
+      </div>
+    </section>
+    <section>
+      <h2>Dự án nổi bật</h2>
+      <div class="projects">
+        <div class="project-card">
+          <img src="./img/bien.jpg" alt="Dự án 1" />
+          <div class="info">
+            <h3>Biển</h3>
+            <p>🏝️ Ra biển không sợ cá mập, chỉ sợ về không có ảnh đăng!</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="./img/hoanghon.jpg" alt="Dự án 2" />
+          <div class="info">
+            <h3>Hoàng hôn</h3>
+            <p>Hoàng hôn 🌅 là sự nhắc nhở đẹp đẽ rằng, kết thúc cũng có thể là một khởi đầu đầy kiêu hãnh. Ngắm một lúc
+              ta liền thấy mỏi cổ!!</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="./img/thuvien.jpg" alt="Dự án 3" />
+          <div class="info">
+            <h3>Nghiên cứu về thế giới :))</h3>
+            <p>Nghiên cứu thế giới thì bao la, còn mình thì chỉ đang nghiên cứu xem tối nay ăn gì cho hết đói!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
