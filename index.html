@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio của Thanh Cute</title>
+  <title>Thanh Cute</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="icon" href="./img/icon.png" type="image/png" />
 
@@ -17,10 +17,52 @@
       color: #eee;
     }
 
+    .marquee {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: none;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      overflow: hidden;
+      z-index: 1000;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .marquee::before {
+      content: attr(data-text);
+      position: absolute;
+      white-space: nowrap;
+      will-change: transform;
+      animation: marquee 10s linear infinite;
+      left: 100%;
+    }
+
+    .marquee::before {
+      content: ">.< Thanh Cute Phô mai que >.<";
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-300%);
+      }
+    }
+
     header {
       padding: 40px 20px;
       text-align: center;
-      background: #1f1f1f;
+      background-image: url('./img/hoanghon.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #eee;
     }
 
     header img {
@@ -37,10 +79,12 @@
       margin: 0;
       font-weight: 700;
       font-size: 28px;
+      color: #352424;
     }
 
     header p {
       margin: 0;
+      color: #352424;
     }
 
     .socials {
@@ -143,10 +187,11 @@
 </head>
 
 <body>
+  <div class="marquee"></div>
   <header>
     <img src="./img/avatar.jpg" alt="Ảnh cá nhân" />
-    <h1>Thanh Thanh</h1>
-    <p>Nhà chiến lược truyền thông</p>
+    <h1>= Thanh Thanh =</h1>
+    <p>- Nhà chiến lược truyền thông -</p>
     <div class="socials">
       <a href="https://www.facebook.com/tthanh1408" target="_blank" title="Facebook">
         <i class="fab fa-facebook-f"></i>
